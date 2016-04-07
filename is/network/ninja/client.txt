@@ -1,0 +1,3 @@
+sudo ./covert -dest 127.0.0.1 -file myFile.txt
+
+sudo ./covert -dest 127.0.0.1 -server -file file.txt

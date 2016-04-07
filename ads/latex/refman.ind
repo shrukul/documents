@@ -1,0 +1,29 @@
+\begin{theindex}
+
+  \item {info}
+    \subitem {node}, \hyperpage{3}
+
+  \indexspace
+
+  \item {lchild}
+    \subitem {node}, \hyperpage{3}
+
+  \indexspace
+
+  \item {node}, \hyperpage{3}
+    \subitem {info}, \hyperpage{3}
+    \subitem {lchild}, \hyperpage{3}
+    \subitem {parent}, \hyperpage{3}
+    \subitem {rchild}, \hyperpage{4}
+
+  \indexspace
+
+  \item {parent}
+    \subitem {node}, \hyperpage{3}
+
+  \indexspace
+
+  \item {rchild}
+    \subitem {node}, \hyperpage{4}
+
+\end{theindex}

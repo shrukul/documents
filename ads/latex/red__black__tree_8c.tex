@@ -1,0 +1,285 @@
+\hypertarget{red__black__tree_8c}{\section{red\+\_\+black\+\_\+tree.\+c File Reference}
+\label{red__black__tree_8c}\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+}
+
+
+Implementation of Red Black Tree.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for red\+\_\+black\+\_\+tree.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{red__black__tree_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{red__black__tree_8c_a2624fa1cdd67434b8466330d6da136cb}{find} (int item, struct \hyperlink{structnode}{node} $\ast$$\ast$loc)
+\begin{DoxyCompactList}\small\item\em Check whether a node with the given value exists in the tree or not. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_af0d230db694cce552cc1f2d9ace36790}{insert} (int item)
+\begin{DoxyCompactList}\small\item\em Inserts a new node. Incase of duplicate node, error is displayed. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_a4117a1fa4bbc89c43cde2db723675185}{insert\+\_\+balance} (struct \hyperlink{structnode}{node} $\ast$nptr)
+\begin{DoxyCompactList}\small\item\em The function performs series of rotations needed after node insertion. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_a9929d6460fc3777d7ed5370228821f00}{del} (int item)
+\begin{DoxyCompactList}\small\item\em Delete a node from the tree. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_a60538a082c5e9d7ee8bf3a8875a9a046}{del\+\_\+balance} (struct \hyperlink{structnode}{node} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em The function performs series of rotations needed after node deletion. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_a4dc9f3f6d87d9c09d27a08d57467fd37}{rotate\+\_\+left} (struct \hyperlink{structnode}{node} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Rotates the tree about the given node in left direction. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_a0adc3d0efa320d6e4f2d833f61e9b105}{rotate\+\_\+right} (struct \hyperlink{structnode}{node} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Rotates the tree about the given node in right direction. \end{DoxyCompactList}\item 
+struct \hyperlink{structnode}{node} $\ast$ \hyperlink{red__black__tree_8c_a832bde6c280220c1d6ab2bb7dc3b9c37}{succ} (struct \hyperlink{structnode}{node} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Finds the inorder successor of the given node. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_af196af0377ad9c6c183cecbea834b5fd}{inorder} (struct \hyperlink{structnode}{node} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Displays Inorder traversal of the tree. \end{DoxyCompactList}\item 
+void \hyperlink{red__black__tree_8c_a7b2e47b8cf80a34f26da732cba791a85}{display} (struct \hyperlink{structnode}{node} $\ast$ptr, int level)
+\begin{DoxyCompactList}\small\item\em Level order traversal of the tree. \end{DoxyCompactList}\item 
+int \hyperlink{red__black__tree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em The Main Function of the Program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{red__black__tree_8c_a4c4817f1c5c2801859d1ded04bf23dce}{struct \hyperlink{structnode}{node} $\ast$ {\bfseries root}}\label{red__black__tree_8c_a4c4817f1c5c2801859d1ded04bf23dce}
+
+\item 
+struct \hyperlink{structnode}{node} $\ast$ \hyperlink{red__black__tree_8c_a540cb45ebb5713fdbd4ead62f41d35d6}{sentinel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of Red Black Tree. 
+
+\begin{DoxyAuthor}{Author}
+Shrukul Habib 13\+C\+O143 
+
+Anant Maheshwari 13\+C\+O111 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{red__black__tree_8c_a9929d6460fc3777d7ed5370228821f00}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!del@{del}}
+\index{del@{del}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{del}]{\setlength{\rightskip}{0pt plus 5cm}void del (
+\begin{DoxyParamCaption}
+\item[{int}]{item}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a9929d6460fc3777d7ed5370228821f00}
+
+
+Delete a node from the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Value of the node to be deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a60538a082c5e9d7ee8bf3a8875a9a046}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!del\+\_\+balance@{del\+\_\+balance}}
+\index{del\+\_\+balance@{del\+\_\+balance}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{del\+\_\+balance}]{\setlength{\rightskip}{0pt plus 5cm}void del\+\_\+balance (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a60538a082c5e9d7ee8bf3a8875a9a046}
+
+
+The function performs series of rotations needed after node deletion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & value of the node to be deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a7b2e47b8cf80a34f26da732cba791a85}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!display@{display}}
+\index{display@{display}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void display (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{ptr, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a7b2e47b8cf80a34f26da732cba791a85}
+
+
+Level order traversal of the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer of the root node \\
+\hline
+{\em level} & The Level of the the current node (1, if starting from root)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a2624fa1cdd67434b8466330d6da136cb}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!find@{find}}
+\index{find@{find}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}int find (
+\begin{DoxyParamCaption}
+\item[{int}]{item, }
+\item[{struct {\bf node} $\ast$$\ast$}]{loc}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a2624fa1cdd67434b8466330d6da136cb}
+
+
+Check whether a node with the given value exists in the tree or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The value of the node to be checked \\
+\hline
+{\em loc} & The location of the found node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_af196af0377ad9c6c183cecbea834b5fd}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!inorder@{inorder}}
+\index{inorder@{inorder}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{inorder}]{\setlength{\rightskip}{0pt plus 5cm}void inorder (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_af196af0377ad9c6c183cecbea834b5fd}
+
+
+Displays Inorder traversal of the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer of the root node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_af0d230db694cce552cc1f2d9ace36790}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!insert@{insert}}
+\index{insert@{insert}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void insert (
+\begin{DoxyParamCaption}
+\item[{int}]{item}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_af0d230db694cce552cc1f2d9ace36790}
+
+
+Inserts a new node. Incase of duplicate node, error is displayed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The value of the node to be inserted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a4117a1fa4bbc89c43cde2db723675185}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!insert\+\_\+balance@{insert\+\_\+balance}}
+\index{insert\+\_\+balance@{insert\+\_\+balance}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{insert\+\_\+balance}]{\setlength{\rightskip}{0pt plus 5cm}void insert\+\_\+balance (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{nptr}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a4117a1fa4bbc89c43cde2db723675185}
+
+
+The function performs series of rotations needed after node insertion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nptr} & The pointer of the new node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!main@{main}}
+\index{main@{main}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+The Main Function of the Program. 
+
+for parent of root node and N\+U\+L\+L nodes \begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a4dc9f3f6d87d9c09d27a08d57467fd37}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!rotate\+\_\+left@{rotate\+\_\+left}}
+\index{rotate\+\_\+left@{rotate\+\_\+left}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{rotate\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}void rotate\+\_\+left (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a4dc9f3f6d87d9c09d27a08d57467fd37}
+
+
+Rotates the tree about the given node in left direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer of the node about which the tree is to be rotated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a0adc3d0efa320d6e4f2d833f61e9b105}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!rotate\+\_\+right@{rotate\+\_\+right}}
+\index{rotate\+\_\+right@{rotate\+\_\+right}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{rotate\+\_\+right}]{\setlength{\rightskip}{0pt plus 5cm}void rotate\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a0adc3d0efa320d6e4f2d833f61e9b105}
+
+
+Rotates the tree about the given node in right direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer of the node about which the tree is to be rotated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn't return anything, void. 
+\end{DoxyReturn}
+\hypertarget{red__black__tree_8c_a832bde6c280220c1d6ab2bb7dc3b9c37}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!succ@{succ}}
+\index{succ@{succ}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{succ}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf node} $\ast$ succ (
+\begin{DoxyParamCaption}
+\item[{struct {\bf node} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{red__black__tree_8c_a832bde6c280220c1d6ab2bb7dc3b9c37}
+
+
+Finds the inorder successor of the given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The pointer of the given node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer of the successor node. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{red__black__tree_8c_a540cb45ebb5713fdbd4ead62f41d35d6}{\index{red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}!sentinel@{sentinel}}
+\index{sentinel@{sentinel}!red\+\_\+black\+\_\+tree.\+c@{red\+\_\+black\+\_\+tree.\+c}}
+\subsubsection[{sentinel}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf node}$\ast$ sentinel}}\label{red__black__tree_8c_a540cb45ebb5713fdbd4ead62f41d35d6}
+This is the pointer of the root node 

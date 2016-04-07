@@ -1,0 +1,421 @@
+Terminals unused in grammar
+
+   ERROR
+   IF
+   THEN
+   ELSE
+   WHILE
+   RETURN
+   GOTO
+   READ
+   WRITE
+   VOID
+   CHAR
+   NE
+   EQ
+   LT
+   LE
+   GT
+   GE
+   AND
+   OR
+   MINUS
+   TIMES
+   OVER
+   MOD
+   INT
+   REAL
+   LBRACK
+   RBRACK
+   COMMA
+   CHRLIT
+   STRLIT
+
+
+Grammar
+
+    0 $accept: block $end
+
+    1 block: LBRACE stmt_seq RBRACE
+    2      | LPAREN stmt_seq RPAREN
+    3      | error
+
+    4 stmt_seq: stmt_seq stmt SEMI
+    5         | stmt SEMI
+    6         | error
+
+    7 stmt: expr
+    8     | decl
+    9     | assignmnt
+   10     | error
+
+   11 decl: decltype IDENT
+
+   12 expr: expr PLUS term
+   13     | term
+
+   14 assignmnt: IDENT ASSIGN expr
+
+   15 term: NUMBER
+   16     | IDENT
+
+   17 decltype: INTEGER
+   18         | FLOAT
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256) 3 6 10
+IDENT (258) 11 14 16
+NUMBER (259) 15
+ASSIGN (260) 14
+PLUS (261) 12
+LBRACE (262) 1
+RBRACE (263) 1
+LPAREN (264) 2
+RPAREN (265) 2
+SEMI (266) 4 5
+ERROR (267)
+FLOAT (268) 18
+INTEGER (269) 17
+IF (270)
+THEN (271)
+ELSE (272)
+WHILE (273)
+RETURN (274)
+GOTO (275)
+READ (276)
+WRITE (277)
+VOID (278)
+CHAR (279)
+NE (280)
+EQ (281)
+LT (282)
+LE (283)
+GT (284)
+GE (285)
+AND (286)
+OR (287)
+MINUS (288)
+TIMES (289)
+OVER (290)
+MOD (291)
+INT (292)
+REAL (293)
+LBRACK (294)
+RBRACK (295)
+COMMA (296)
+CHRLIT (297)
+STRLIT (298)
+
+
+Nonterminals, with rules where they appear
+
+$accept (44)
+    on left: 0
+block (45)
+    on left: 1 2 3, on right: 0
+stmt_seq (46)
+    on left: 4 5 6, on right: 1 2 4
+stmt (47)
+    on left: 7 8 9 10, on right: 4 5
+decl (48)
+    on left: 11, on right: 8
+expr (49)
+    on left: 12 13, on right: 7 12 14
+assignmnt (50)
+    on left: 14, on right: 9
+term (51)
+    on left: 15 16, on right: 12 13
+decltype (52)
+    on left: 17 18, on right: 11
+
+
+State 0
+
+    0 $accept: . block $end
+
+    error   shift, and go to state 1
+    LBRACE  shift, and go to state 2
+    LPAREN  shift, and go to state 3
+
+    block  go to state 4
+
+
+State 1
+
+    3 block: error .
+
+    $default  reduce using rule 3 (block)
+
+
+State 2
+
+    1 block: LBRACE . stmt_seq RBRACE
+
+    error    shift, and go to state 5
+    IDENT    shift, and go to state 6
+    NUMBER   shift, and go to state 7
+    FLOAT    shift, and go to state 8
+    INTEGER  shift, and go to state 9
+
+    stmt_seq   go to state 10
+    stmt       go to state 11
+    decl       go to state 12
+    expr       go to state 13
+    assignmnt  go to state 14
+    term       go to state 15
+    decltype   go to state 16
+
+
+State 3
+
+    2 block: LPAREN . stmt_seq RPAREN
+
+    error    shift, and go to state 5
+    IDENT    shift, and go to state 6
+    NUMBER   shift, and go to state 7
+    FLOAT    shift, and go to state 8
+    INTEGER  shift, and go to state 9
+
+    stmt_seq   go to state 17
+    stmt       go to state 11
+    decl       go to state 12
+    expr       go to state 13
+    assignmnt  go to state 14
+    term       go to state 15
+    decltype   go to state 16
+
+
+State 4
+
+    0 $accept: block . $end
+
+    $end  shift, and go to state 18
+
+
+State 5
+
+    6 stmt_seq: error .
+   10 stmt: error .
+
+    SEMI      reduce using rule 10 (stmt)
+    $default  reduce using rule 6 (stmt_seq)
+
+
+State 6
+
+   14 assignmnt: IDENT . ASSIGN expr
+   16 term: IDENT .
+
+    ASSIGN  shift, and go to state 19
+
+    $default  reduce using rule 16 (term)
+
+
+State 7
+
+   15 term: NUMBER .
+
+    $default  reduce using rule 15 (term)
+
+
+State 8
+
+   18 decltype: FLOAT .
+
+    $default  reduce using rule 18 (decltype)
+
+
+State 9
+
+   17 decltype: INTEGER .
+
+    $default  reduce using rule 17 (decltype)
+
+
+State 10
+
+    1 block: LBRACE stmt_seq . RBRACE
+    4 stmt_seq: stmt_seq . stmt SEMI
+
+    error    shift, and go to state 20
+    IDENT    shift, and go to state 6
+    NUMBER   shift, and go to state 7
+    RBRACE   shift, and go to state 21
+    FLOAT    shift, and go to state 8
+    INTEGER  shift, and go to state 9
+
+    stmt       go to state 22
+    decl       go to state 12
+    expr       go to state 13
+    assignmnt  go to state 14
+    term       go to state 15
+    decltype   go to state 16
+
+
+State 11
+
+    5 stmt_seq: stmt . SEMI
+
+    SEMI  shift, and go to state 23
+
+
+State 12
+
+    8 stmt: decl .
+
+    $default  reduce using rule 8 (stmt)
+
+
+State 13
+
+    7 stmt: expr .
+   12 expr: expr . PLUS term
+
+    PLUS  shift, and go to state 24
+
+    $default  reduce using rule 7 (stmt)
+
+
+State 14
+
+    9 stmt: assignmnt .
+
+    $default  reduce using rule 9 (stmt)
+
+
+State 15
+
+   13 expr: term .
+
+    $default  reduce using rule 13 (expr)
+
+
+State 16
+
+   11 decl: decltype . IDENT
+
+    IDENT  shift, and go to state 25
+
+
+State 17
+
+    2 block: LPAREN stmt_seq . RPAREN
+    4 stmt_seq: stmt_seq . stmt SEMI
+
+    error    shift, and go to state 20
+    IDENT    shift, and go to state 6
+    NUMBER   shift, and go to state 7
+    RPAREN   shift, and go to state 26
+    FLOAT    shift, and go to state 8
+    INTEGER  shift, and go to state 9
+
+    stmt       go to state 22
+    decl       go to state 12
+    expr       go to state 13
+    assignmnt  go to state 14
+    term       go to state 15
+    decltype   go to state 16
+
+
+State 18
+
+    0 $accept: block $end .
+
+    $default  accept
+
+
+State 19
+
+   14 assignmnt: IDENT ASSIGN . expr
+
+    IDENT   shift, and go to state 27
+    NUMBER  shift, and go to state 7
+
+    expr  go to state 28
+    term  go to state 15
+
+
+State 20
+
+   10 stmt: error .
+
+    $default  reduce using rule 10 (stmt)
+
+
+State 21
+
+    1 block: LBRACE stmt_seq RBRACE .
+
+    $default  reduce using rule 1 (block)
+
+
+State 22
+
+    4 stmt_seq: stmt_seq stmt . SEMI
+
+    SEMI  shift, and go to state 29
+
+
+State 23
+
+    5 stmt_seq: stmt SEMI .
+
+    $default  reduce using rule 5 (stmt_seq)
+
+
+State 24
+
+   12 expr: expr PLUS . term
+
+    IDENT   shift, and go to state 27
+    NUMBER  shift, and go to state 7
+
+    term  go to state 30
+
+
+State 25
+
+   11 decl: decltype IDENT .
+
+    $default  reduce using rule 11 (decl)
+
+
+State 26
+
+    2 block: LPAREN stmt_seq RPAREN .
+
+    $default  reduce using rule 2 (block)
+
+
+State 27
+
+   16 term: IDENT .
+
+    $default  reduce using rule 16 (term)
+
+
+State 28
+
+   12 expr: expr . PLUS term
+   14 assignmnt: IDENT ASSIGN expr .
+
+    PLUS  shift, and go to state 24
+
+    $default  reduce using rule 14 (assignmnt)
+
+
+State 29
+
+    4 stmt_seq: stmt_seq stmt SEMI .
+
+    $default  reduce using rule 4 (stmt_seq)
+
+
+State 30
+
+   12 expr: expr PLUS term .
+
+    $default  reduce using rule 12 (expr)

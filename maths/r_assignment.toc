@@ -1,0 +1,10 @@
+\contentsline {section}{Introduction}{3}
+\contentsline {subsection}{Setting up R in Windows}{3}
+\contentsline {subsection}{R-basics}{3}
+\contentsline {section}{Plotting Functions}{4}
+\contentsline {subsection}{Bar Charts}{4}
+\contentsline {subsection}{Pie Charts}{5}
+\contentsline {subsection}{Numerical data}{5}
+\contentsline {subsection}{Histogram}{6}
+\contentsline {section}{Bivariate data}{6}
+\contentsline {section}{Conclusion}{7}

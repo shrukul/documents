@@ -1,0 +1,7 @@
+position.o: \
+ /home/shrukul/Documents/graphics/astar-algorithm-cpp-master/dij/aip2p-1.1.0/src/position.cpp \
+ /usr/include/stdc-predef.h \
+ /home/shrukul/Documents/graphics/astar-algorithm-cpp-master/dij/aip2p-1.1.0/include/position.h
+ /home/shrukul/Documents/graphics/astar-algorithm-cpp-master/dij/aip2p-1.1.0/src/position.cpp :
+ /usr/include/stdc-predef.h :
+ /home/shrukul/Documents/graphics/astar-algorithm-cpp-master/dij/aip2p-1.1.0/include/position.h :

