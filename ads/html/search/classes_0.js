@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['node',['../structnode.html',1,'']]]
+  ['binomialheap',['BinomialHeap',['../classBinomialHeap.html',1,'']]]
 ];

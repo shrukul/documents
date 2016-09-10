@@ -83,7 +83,7 @@ result=numpy.array(x).astype('float')
 rows = len(result)
 cols = len(result[42])
 
-print rows, cols
+#print rows, cols
 
 i=1
 graph = Graph()
@@ -138,7 +138,7 @@ lis = []
 
 nodesList = getPath(path,18810,lis)
 
-print nodesList
+#print nodesList
 
-for each in nodesList:
-  print coord(each, rows, cols)
+#for each in nodesList:
+#  print coord(each, rows, cols)

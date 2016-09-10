@@ -1,0 +1,240 @@
+Introduction:-
+
+    The problem of Video Synchronization has been studied extensively in the past. By "Video Synchronization", we refer to the problem of aligning, which may have different pace and may be recorded at different time, such that the resulting videos appear to move through the similar objects together. Traditionally, most of the existing solutions used spatial alignments between individual frames of the two videos to achieve synchronization. However, this wouldn't give accurate results if the videos were not in temporal alignment. Hence, our method takes into consideration both spatial and temporal cues for synchronizing the two videos.
+
+    It has a lot of applications in Movie Productions and Visual effects, Video mosaicking, and stitching and action recognition. In movies having twin or duplicate roles, the actor is made to shoot two different sequences for the two characters. Then, the two videos are synchronized and then superimposed so that the resulting video consists of both the characters in the same frame.
+
+    We extract the frames of the two videos and generate a cost matrix which gives the cost of aligning any two frames of the two videos. Both the spatial and temporal aspects are taken into consideration when generating the cost matrix. Lesser the cost, the better the alignment between those two frames. Hence, we compute shortest path in the Cost matrix. To do this, we use a modified version of Dijsktra's algorithm that gives the path having the lowest cost, and hence the best alignment between the two videos. We then smoothen this curve using Bezier's algorithm.
+
+Result:-
+
+    We applied our algorithm and the existing solution on a series of videos and obtained the following results.
+
+    1) For High Definition (HD) Videos, our algorithm was found to be on par with the existing solutions.
+    2) For Low Quality or Noisy Videos, such as the ones shot by Smartphone cameras, we found that our algorithm gives considerably better synchronization between the two. 
+
+    (For pictures)
+    a. Frame 1 of the original video.
+    b. Frame 61 of the original video.
+    c. Frame 121 of the original video.
+    d. Frame 181 of the original video.
+
+
+Blibliography:-
+
+@article{wang2014videosnapping,
+  title={Videosnapping: Interactive synchronization of multiple videos},
+  author={Wang, Oliver and Schroers, Christopher and Zimmer, Henning and Gross, Markus and Sorkine-Hornung, Alexander},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={33},
+  number={4},
+  pages={77},
+  year={2014},
+  publisher={ACM}
+}
+
+@article{caspi2002spatio,
+  title={Spatio-temporal alignment of sequences},
+  author={Caspi, Yaron and Irani, Michal},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={24},
+  number={11},
+  pages={1409--1424},
+  year={2002},
+  publisher={IEEE}
+}
+
+@inproceedings{bryan2012clustering,
+  title={Clustering and synchronizing multi-camera video via landmark cross-correlation},
+  author={Bryan, Nicholas J and Smaragdis, Paris and Mysore, Gautham J},
+  booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE International Conference on},
+  pages={2389--2392},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{diego2011video,
+  title={Video alignment for change detection},
+  author={Diego, Ferran and Ponsa, Daniel and Serrat, Joan and L{\'o}pez, Antonio M},
+  journal={Image Processing, IEEE Transactions on},
+  volume={20},
+  number={7},
+  pages={1858--1869},
+  year={2011},
+  publisher={IEEE}
+}
+
+@inproceedings{shrstha2007synchronization,
+  title={Synchronization of multi-camera video recordings based on audio},
+  author={Shrstha, Prarthana and Barbieri, Mauro and Weda, Hans},
+  booktitle={Proceedings of the 15th international conference on Multimedia},
+  pages={545--548},
+  year={2007},
+  organization={ACM}
+}
+
+@article{evangelidis2013efficient,
+  title={Efficient subframe video alignment using short descriptors},
+  author={Evangelidis, Georgios D and Bauckhage, Christian},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={35},
+  number={10},
+  pages={2371--2386},
+  year={2013},
+  publisher={IEEE}
+}
+
+@article{diego2013joint,
+  title={Joint spatio-temporal alignment of sequences},
+  author={Diego, Ferran and Serrat, Joan and L{\'o}pez, Antonio M},
+  journal={Multimedia, IEEE Transactions on},
+  volume={15},
+  number={6},
+  pages={1377--1387},
+  year={2013},
+  publisher={IEEE}
+}
+
+@inproceedings{baker2001equivalence,
+  title={Equivalence and efficiency of image alignment algorithms},
+  author={Baker, Simon and Matthews, Iain},
+  booktitle={Computer Vision and Pattern Recognition, 2001. CVPR 2001. Proceedings of the 2001 IEEE Computer Society Conference on},
+  volume={1},
+  pages={I--1090},
+  year={2001},
+  organization={IEEE}
+}
+
+@inproceedings{caspi2000step,
+  title={A step towards sequence-to-sequence alignment},
+  author={Caspi, Yaron and Irani, Michal},
+  booktitle={Computer Vision and Pattern Recognition, 2000. Proceedings. IEEE Conference on},
+  volume={2},
+  pages={682--689},
+  year={2000},
+  organization={IEEE}
+}
+
+@inproceedings{jiang2007towards,
+  title={Towards optimal bag-of-features for object categorization and semantic video retrieval},
+  author={Jiang, Yu-Gang and Ngo, Chong-Wah and Yang, Jun},
+  booktitle={Proceedings of the 6th ACM international conference on Image and video retrieval},
+  pages={494--501},
+  year={2007},
+  organization={ACM}
+}
+
+@book{tomasi1991detection,
+  title={Detection and tracking of point features},
+  author={Tomasi, Carlo and Kanade, Takeo},
+  year={1991},
+  publisher={School of Computer Science, Carnegie Mellon Univ. Pittsburgh}
+}
+
+@book{ukrainitz2006aligning,
+  title={Aligning sequences and actions by maximizing space-time correlations},
+  author={Ukrainitz, Yaron and Irani, Michal},
+  year={2006},
+  publisher={Springer}
+}
+
+@article{scharstein2002taxonomy,
+  title={A taxonomy and evaluation of dense two-frame stereo correspondence algorithms},
+  author={Scharstein, Daniel and Szeliski, Richard},
+  journal={International journal of computer vision},
+  volume={47},
+  number={1-3},
+  pages={7--42},
+  year={2002},
+  publisher={Springer}
+}
+
+@misc{ruegg2013spatio,
+  title={Spatio-temporal video compositing},
+  author={Ruegg, Jan and Wang, Oliver and Smolic, Aljosa and Gross, Markus},
+  year={2013},
+  month=sep # "~9",
+  publisher={Google Patents},
+  note={US Patent App. 14/022,048}
+}
+
+@inproceedings{shechtman2005space,
+  title={Space-time behavior based correlation},
+  author={Shechtman, Eli and Irani, Michal},
+  booktitle={Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on},
+  volume={1},
+  pages={405--412},
+  year={2005},
+  organization={IEEE}
+}
+
+@article{ngo2005video,
+  title={Video summarization and scene detection by graph modeling},
+  author={Ngo, Chong-Wah and Ma, Yu-Fei and Zhang, Hong-Jiang},
+  journal={Circuits and Systems for Video Technology, IEEE Transactions on},
+  volume={15},
+  number={2},
+  pages={296--305},
+  year={2005},
+  publisher={IEEE}
+}
+
+@inproceedings{rao2003view,
+  title={View-invariant alignment and matching of video sequences},
+  author={Rao, Cen and Gritai, Alexei and Shah, Mubarak and Syeda-Mahmood, Tanveer},
+  booktitle={Computer Vision, 2003. Proceedings. Ninth IEEE International Conference on},
+  pages={939--945},
+  year={2003},
+  organization={IEEE}
+}
+
+@article{liu2011sift,
+  title={Sift flow: Dense correspondence across scenes and its applications},
+  author={Liu, Ce and Yuen, Jenny and Torralba, Antonio},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={33},
+  number={5},
+  pages={978--994},
+  year={2011},
+  publisher={IEEE}
+}
+
+@incollection{li2010aligning,
+  title={Aligning spatio-temporal signals on a special manifold},
+  author={Li, Ruonan and Chellappa, Rama},
+  booktitle={Computer Vision--ECCV 2010},
+  pages={547--560},
+  year={2010},
+  publisher={Springer}
+}
+
+@article{kang1977digital,
+  title={Digital image processing},
+  author={Kang, G},
+  journal={Quest, vol. 1, Autumn 1977, p. 2-20.},
+  volume={1},
+  pages={2--20},
+  year={1977}
+}
+
+@article{caspi2002aligning,
+  title={Aligning non-overlapping sequences},
+  author={Caspi, Yaron and Irani, Michal},
+  journal={International Journal of Computer Vision},
+  volume={48},
+  number={1},
+  pages={39--51},
+  year={2002},
+  publisher={Springer}
+}
+
+@article{caspi2006feature,
+  title={Feature-based sequence-to-sequence matching},
+  author={Caspi, Yaron and Simakov, Denis and Irani, Michal},
+  journal={International Journal of Computer Vision},
+  volume={68},
+  number={1},
+  pages={53--64},
+  year={2006},
+  publisher={Springer}
+}

@@ -1,0 +1,22 @@
+There are 3 csv files which contain phonebooks of two people.The csv files are in the format (name,number,company).
+You have to implement a social graph over these files.
+
+
+Example queries    
+Display Adams first degree connections
+Displays Adams all second degree connections
+Adams wants to know a contact in Adobe
+Adam wants to know all the contacts Yahoo
+    
+Part 1 of the problem.
+1.Read the CSV files.
+2.Build the graph
+3.Run the queries
+    
+Part 2 of the problem 
+What algorithm is used for printing degree connections for a particular person
+What alorith is used for finding a particular person who belongs to a particular company.
+    
+Regards
+Karan 
+    

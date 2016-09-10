@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['del',['del',['../red__black__tree_8c.html#a9929d6460fc3777d7ed5370228821f00',1,'red_black_tree.c']]],
-  ['del_5fbalance',['del_balance',['../red__black__tree_8c.html#a60538a082c5e9d7ee8bf3a8875a9a046',1,'red_black_tree.c']]],
-  ['display',['display',['../red__black__tree_8c.html#a7b2e47b8cf80a34f26da732cba791a85',1,'red_black_tree.c']]]
+  ['binary_5fheap',['binary_heap',['../dijkstra_8cpp.html#a5385191f1fa49e3bff8f8454ec06d4b7',1,'dijkstra.cpp']]],
+  ['binomial_5fheap',['binomial_heap',['../dijkstra_8cpp.html#a65b63d3256f123d625130e6a4bb2181f',1,'dijkstra.cpp']]],
+  ['binomial_5flink',['Binomial_link',['../classBinomialHeap.html#a657d892542f95da35f386fbe35564a35',1,'BinomialHeap']]]
 ];

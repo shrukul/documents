@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../red__black__tree_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'red_black_tree.c']]]
+  ['extract_5fmin',['Extract_Min',['../classBinomialHeap.html#a71e1468e2782db3f2322d188bca1e48a',1,'BinomialHeap::Extract_Min()'],['../classFibonacciHeap.html#a532230bf1688291111504c863d35cb08',1,'FibonacciHeap::Extract_Min()']]]
 ];

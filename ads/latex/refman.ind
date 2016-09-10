@@ -1,29 +1,199 @@
 \begin{theindex}
 
-  \item {info}
-    \subitem {node}, \hyperpage{3}
+  \item {binary\+\_\+heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{19}
+  \item {binomial\+\_\+heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{19}
+  \item {Binomial\+\_\+link}
+    \subitem {Binomial\+Heap}, \hyperpage{6}
+  \item {Binomial\+Heap}, \hyperpage{5}
+    \subitem {Binomial\+\_\+link}, \hyperpage{6}
+    \subitem {Create\+\_\+node}, \hyperpage{6}
+    \subitem {Decrease\+\_\+key}, \hyperpage{6}
+    \subitem {Delete}, \hyperpage{7}
+    \subitem {Display}, \hyperpage{7}
+    \subitem {Extract\+\_\+\+Min}, \hyperpage{7}
+    \subitem {Initializeheap}, \hyperpage{7}
+    \subitem {Insert}, \hyperpage{8}
+    \subitem {Merge}, \hyperpage{8}
+    \subitem {Revert\+\_\+list}, \hyperpage{8}
+    \subitem {Search}, \hyperpage{8}
+    \subitem {Union}, \hyperpage{9}
 
   \indexspace
 
-  \item {lchild}
-    \subitem {node}, \hyperpage{3}
+  \item {Cascase\+\_\+cut}
+    \subitem {Fibonacci\+Heap}, \hyperpage{10}
+  \item {child}
+    \subitem {node}, \hyperpage{15}
+    \subitem {nodef}, \hyperpage{16}
+  \item {Consolidate}
+    \subitem {Fibonacci\+Heap}, \hyperpage{10}
+  \item {Create\+\_\+node}
+    \subitem {Binomial\+Heap}, \hyperpage{6}
+    \subitem {Fibonacci\+Heap}, \hyperpage{11}
+  \item {Cut}
+    \subitem {Fibonacci\+Heap}, \hyperpage{11}
 
   \indexspace
 
-  \item {node}, \hyperpage{3}
-    \subitem {info}, \hyperpage{3}
-    \subitem {lchild}, \hyperpage{3}
-    \subitem {parent}, \hyperpage{3}
-    \subitem {rchild}, \hyperpage{4}
+  \item {Decrease\+\_\+key}
+    \subitem {Binomial\+Heap}, \hyperpage{6}
+    \subitem {Fibonacci\+Heap}, \hyperpage{11}
+  \item {degree}
+    \subitem {node}, \hyperpage{15}
+    \subitem {nodef}, \hyperpage{16}
+  \item {Delete}
+    \subitem {Binomial\+Heap}, \hyperpage{7}
+  \item {Delete\+\_\+key}
+    \subitem {Fibonacci\+Heap}, \hyperpage{11}
+  \item {delete\+Binary\+Heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{19}
+  \item {dijkstra.\+cpp}, \hyperpage{17}
+    \subitem {binary\+\_\+heap}, \hyperpage{19}
+    \subitem {binomial\+\_\+heap}, \hyperpage{19}
+    \subitem {delete\+Binary\+Heap}, \hyperpage{19}
+    \subitem {fibonacci\+\_\+heap}, \hyperpage{19}
+    \subitem {get\+Left}, \hyperpage{19}
+    \subitem {get\+Right}, \hyperpage{20}
+    \subitem {heapify\+Down\+Binary\+Heap}, \hyperpage{20}
+    \subitem {heapify\+Up\+Binary\+Heap}, \hyperpage{20}
+    \subitem {insert\+Binary\+Heap}, \hyperpage{20}
+    \subitem {main}, \hyperpage{21}
+    \subitem {parent}, \hyperpage{21}
+    \subitem {value}, \hyperpage{21}
+  \item {Display}
+    \subitem {Binomial\+Heap}, \hyperpage{7}
+    \subitem {Fibonacci\+Heap}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Extract\+\_\+\+Min}
+    \subitem {Binomial\+Heap}, \hyperpage{7}
+    \subitem {Fibonacci\+Heap}, \hyperpage{12}
+
+  \indexspace
+
+  \item {fibonacci\+\_\+heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{19}
+  \item {Fibonacci\+Heap}, \hyperpage{9}
+    \subitem {Cascase\+\_\+cut}, \hyperpage{10}
+    \subitem {Consolidate}, \hyperpage{10}
+    \subitem {Create\+\_\+node}, \hyperpage{11}
+    \subitem {Cut}, \hyperpage{11}
+    \subitem {Decrease\+\_\+key}, \hyperpage{11}
+    \subitem {Delete\+\_\+key}, \hyperpage{11}
+    \subitem {Display}, \hyperpage{12}
+    \subitem {Extract\+\_\+\+Min}, \hyperpage{12}
+    \subitem {Fibonnaci\+\_\+link}, \hyperpage{12}
+    \subitem {Find}, \hyperpage{13}
+    \subitem {Initialize\+Heap}, \hyperpage{13}
+    \subitem {Insert}, \hyperpage{13}
+    \subitem {pop}, \hyperpage{13}
+    \subitem {top}, \hyperpage{13}
+    \subitem {Union}, \hyperpage{14}
+  \item {Fibonnaci\+\_\+link}
+    \subitem {Fibonacci\+Heap}, \hyperpage{12}
+  \item {Find}
+    \subitem {Fibonacci\+Heap}, \hyperpage{13}
+
+  \indexspace
+
+  \item {get\+Left}
+    \subitem {dijkstra.\+cpp}, \hyperpage{19}
+  \item {get\+Right}
+    \subitem {dijkstra.\+cpp}, \hyperpage{20}
+
+  \indexspace
+
+  \item {heapify\+Down\+Binary\+Heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{20}
+  \item {heapify\+Up\+Binary\+Heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{20}
+
+  \indexspace
+
+  \item {index}
+    \subitem {node}, \hyperpage{15}
+    \subitem {nodef}, \hyperpage{16}
+  \item {Initialize\+Heap}
+    \subitem {Fibonacci\+Heap}, \hyperpage{13}
+  \item {Initializeheap}
+    \subitem {Binomial\+Heap}, \hyperpage{7}
+  \item {Insert}
+    \subitem {Binomial\+Heap}, \hyperpage{8}
+    \subitem {Fibonacci\+Heap}, \hyperpage{13}
+  \item {insert\+Binary\+Heap}
+    \subitem {dijkstra.\+cpp}, \hyperpage{20}
+
+  \indexspace
+
+  \item {left}
+    \subitem {nodef}, \hyperpage{16}
+
+  \indexspace
+
+  \item {main}
+    \subitem {dijkstra.\+cpp}, \hyperpage{21}
+  \item {mark}
+    \subitem {nodef}, \hyperpage{16}
+  \item {Merge}
+    \subitem {Binomial\+Heap}, \hyperpage{8}
+
+  \indexspace
+
+  \item {node}, \hyperpage{14}
+    \subitem {child}, \hyperpage{15}
+    \subitem {degree}, \hyperpage{15}
+    \subitem {index}, \hyperpage{15}
+    \subitem {parent}, \hyperpage{15}
+    \subitem {sibling}, \hyperpage{15}
+  \item {nodef}, \hyperpage{15}
+    \subitem {child}, \hyperpage{16}
+    \subitem {degree}, \hyperpage{16}
+    \subitem {index}, \hyperpage{16}
+    \subitem {left}, \hyperpage{16}
+    \subitem {mark}, \hyperpage{16}
+    \subitem {parent}, \hyperpage{16}
+    \subitem {right}, \hyperpage{16}
 
   \indexspace
 
   \item {parent}
-    \subitem {node}, \hyperpage{3}
+    \subitem {dijkstra.\+cpp}, \hyperpage{21}
+    \subitem {node}, \hyperpage{15}
+    \subitem {nodef}, \hyperpage{16}
+  \item {pop}
+    \subitem {Fibonacci\+Heap}, \hyperpage{13}
 
   \indexspace
 
-  \item {rchild}
-    \subitem {node}, \hyperpage{4}
+  \item {Revert\+\_\+list}
+    \subitem {Binomial\+Heap}, \hyperpage{8}
+  \item {right}
+    \subitem {nodef}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Search}
+    \subitem {Binomial\+Heap}, \hyperpage{8}
+  \item {sibling}
+    \subitem {node}, \hyperpage{15}
+
+  \indexspace
+
+  \item {top}
+    \subitem {Fibonacci\+Heap}, \hyperpage{13}
+
+  \indexspace
+
+  \item {Union}
+    \subitem {Binomial\+Heap}, \hyperpage{9}
+    \subitem {Fibonacci\+Heap}, \hyperpage{14}
+
+  \indexspace
+
+  \item {value}
+    \subitem {dijkstra.\+cpp}, \hyperpage{21}
 
 \end{theindex}

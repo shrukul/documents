@@ -1,0 +1,322 @@
+\hypertarget{dijkstra_8cpp}{}\section{dijkstra.\+cpp File Reference}
+\label{dijkstra_8cpp}\index{dijkstra.\+cpp@{dijkstra.\+cpp}}
+
+
+Implementation of Dijsktra\textquotesingle{}s algorithm using Binary Heap, Binomial Heap and Fibonacci Heap.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\begin{DoxyCompactList}\small\item\em $\ast$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------B\+I\+N\+O\+M\+I\+AL H\+E\+A\+P-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------$\ast$/ \end{DoxyCompactList}\item 
+class \hyperlink{classBinomialHeap}{Binomial\+Heap}
+\begin{DoxyCompactList}\small\item\em Binomial Heap Data Structure class. \end{DoxyCompactList}\item 
+struct \hyperlink{structnodef}{nodef}
+\begin{DoxyCompactList}\small\item\em $\ast$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------F\+I\+B\+O\+N\+A\+C\+CI H\+E\+A\+P-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------$\ast$/ \end{DoxyCompactList}\item 
+class \hyperlink{classFibonacciHeap}{Fibonacci\+Heap}
+\begin{DoxyCompactList}\small\item\em Fibonacci Heap Data Structure class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries M\+AX}~100001\hypertarget{dijkstra_8cpp_a392fb874e547e582e9c66a08a1f23326}{}\label{dijkstra_8cpp_a392fb874e547e582e9c66a08a1f23326}
+
+\item 
+\#define {\bfseries I\+NF}~(1$<$$<$20)\hypertarget{dijkstra_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}{}\label{dijkstra_8cpp_a12c2040f25d8e3a7b9e1c2024c618cb6}
+
+\item 
+\#define {\bfseries pii}~pair$<$ int, int $>$\hypertarget{dijkstra_8cpp_ad665d3545da459160ac2b774063cc367}{}\label{dijkstra_8cpp_ad665d3545da459160ac2b774063cc367}
+
+\item 
+\#define {\bfseries pb}(x)~push\+\_\+back(x)\hypertarget{dijkstra_8cpp_a718dd9f88a8a951fe6b91f9fffaee305}{}\label{dijkstra_8cpp_a718dd9f88a8a951fe6b91f9fffaee305}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{dijkstra_8cpp_ab0f4486e55f1ff205438507d914d87e1}{parent} (int index)
+\begin{DoxyCompactList}\small\item\em Finds the parent of a node in a tree. \end{DoxyCompactList}\item 
+int \hyperlink{dijkstra_8cpp_a433986963774dd5b1a942a7fa6b9a07f}{value} (int index)
+\begin{DoxyCompactList}\small\item\em Returns the value of the node for a fiven index. \end{DoxyCompactList}\item 
+void \hyperlink{dijkstra_8cpp_af96b1b6618a0c4cfd630ea59e8506bd0}{heapify\+Up\+Binary\+Heap} (int index)
+\begin{DoxyCompactList}\small\item\em Heapifies the given binary heap after insertion or deletion. Min Heap. \end{DoxyCompactList}\item 
+void \hyperlink{dijkstra_8cpp_a9ab56ec361175aa7ab085057afb804bc}{insert\+Binary\+Heap} (pair$<$ int, int $>$ element)
+\begin{DoxyCompactList}\small\item\em Insertion of a new node in the given Binary Heap. \end{DoxyCompactList}\item 
+int \hyperlink{dijkstra_8cpp_aa27ffacff065847b3421ace4958ea782}{get\+Left} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the left child index of a given node. \end{DoxyCompactList}\item 
+int \hyperlink{dijkstra_8cpp_a55aa54819a680f161719d3c18028a7f8}{get\+Right} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the right child index of a given node. \end{DoxyCompactList}\item 
+void \hyperlink{dijkstra_8cpp_a9e95a41df12e4ca165a350fca66659e4}{heapify\+Down\+Binary\+Heap} (int index)
+\begin{DoxyCompactList}\small\item\em Heapify the binary heap after Deleion Operation (Sort) \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \hyperlink{dijkstra_8cpp_af2de7bf96c6575abe364eec181958d1f}{delete\+Binary\+Heap} ()
+\begin{DoxyCompactList}\small\item\em Obtains the lowest value from the heap and deleted the node and then heapifies the binary heap. \end{DoxyCompactList}\item 
+void \hyperlink{dijkstra_8cpp_a5385191f1fa49e3bff8f8454ec06d4b7}{binary\+\_\+heap} ()
+\begin{DoxyCompactList}\small\item\em Create a Binary Heap. \end{DoxyCompactList}\item 
+void \hyperlink{dijkstra_8cpp_a65b63d3256f123d625130e6a4bb2181f}{binomial\+\_\+heap} ()
+\begin{DoxyCompactList}\small\item\em Create a Binomial Heap. \end{DoxyCompactList}\item 
+void \hyperlink{dijkstra_8cpp_a5a1be60286c4d631fcdc294d63406f90}{fibonacci\+\_\+heap} ()
+\begin{DoxyCompactList}\small\item\em Create a F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+int \hyperlink{dijkstra_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em The Main Function of the Program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries index\+\_\+node}\hypertarget{dijkstra_8cpp_a083793c1b5128f65f2800cc8dc7087bb}{}\label{dijkstra_8cpp_a083793c1b5128f65f2800cc8dc7087bb}
+
+\item 
+vector$<$ pair$<$ int, int $>$ $>$ \hyperlink{dijkstra_8cpp_a8ba291d491dc90547eae0d456cb3c44c}{binary\+Heap}\hypertarget{dijkstra_8cpp_a8ba291d491dc90547eae0d456cb3c44c}{}\label{dijkstra_8cpp_a8ba291d491dc90547eae0d456cb3c44c}
+
+\begin{DoxyCompactList}\small\item\em $\ast$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---B\+I\+N\+A\+RY H\+E\+A\+P-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$\ast$/ \end{DoxyCompactList}\item 
+vector$<$ pii $>$ {\bfseries G} \mbox{[}M\+AX\mbox{]}\hypertarget{dijkstra_8cpp_a29a3f1b4fd7c22f5a897888b932f98ab}{}\label{dijkstra_8cpp_a29a3f1b4fd7c22f5a897888b932f98ab}
+
+\item 
+int {\bfseries D} \mbox{[}M\+AX\mbox{]}\hypertarget{dijkstra_8cpp_a41eed31ede9e206d8f69a3601a2875bd}{}\label{dijkstra_8cpp_a41eed31ede9e206d8f69a3601a2875bd}
+
+\item 
+bool {\bfseries F} \mbox{[}M\+AX\mbox{]}\hypertarget{dijkstra_8cpp_a13f197341dfce548b9f9584d441b828d}{}\label{dijkstra_8cpp_a13f197341dfce548b9f9584d441b828d}
+
+\item 
+int {\bfseries i}\hypertarget{dijkstra_8cpp_acb559820d9ca11295b4500f179ef6392}{}\label{dijkstra_8cpp_acb559820d9ca11295b4500f179ef6392}
+
+\item 
+int {\bfseries u}\hypertarget{dijkstra_8cpp_a5874b4c2ec2e28321eea4e4871d08222}{}\label{dijkstra_8cpp_a5874b4c2ec2e28321eea4e4871d08222}
+
+\item 
+int {\bfseries v}\hypertarget{dijkstra_8cpp_ac8859e8c1ce357c4c8b37bbb1936ba1c}{}\label{dijkstra_8cpp_ac8859e8c1ce357c4c8b37bbb1936ba1c}
+
+\item 
+int {\bfseries w}\hypertarget{dijkstra_8cpp_aac374e320caaadeca4874add33b62af2}{}\label{dijkstra_8cpp_aac374e320caaadeca4874add33b62af2}
+
+\item 
+int {\bfseries sz}\hypertarget{dijkstra_8cpp_a0e1ea19fb9fa7881d15d84eff4c090e1}{}\label{dijkstra_8cpp_a0e1ea19fb9fa7881d15d84eff4c090e1}
+
+\item 
+int {\bfseries nodes}\hypertarget{dijkstra_8cpp_a6b7983ccd32c86cbbc3d4d9cda4cac17}{}\label{dijkstra_8cpp_a6b7983ccd32c86cbbc3d4d9cda4cac17}
+
+\item 
+int {\bfseries edges}\hypertarget{dijkstra_8cpp_a398acefd9cbf90d7f477b65d55a6b1ec}{}\label{dijkstra_8cpp_a398acefd9cbf90d7f477b65d55a6b1ec}
+
+\item 
+int {\bfseries starting}\hypertarget{dijkstra_8cpp_ae3e9c2dd4477c3dbccc953a5dc27da6f}{}\label{dijkstra_8cpp_ae3e9c2dd4477c3dbccc953a5dc27da6f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of Dijsktra\textquotesingle{}s algorithm using Binary Heap, Binomial Heap and Fibonacci Heap. 
+
+\begin{DoxyDate}{Date}
+15 April 2016
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Shrukul Habib 13\+C\+O143 
+
+Anant Maheshwari 13\+C\+O111 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!binary\+\_\+heap@{binary\+\_\+heap}}
+\index{binary\+\_\+heap@{binary\+\_\+heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{binary\+\_\+heap()}{binary_heap()}}]{\setlength{\rightskip}{0pt plus 5cm}void binary\+\_\+heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a5385191f1fa49e3bff8f8454ec06d4b7}{}\label{dijkstra_8cpp_a5385191f1fa49e3bff8f8454ec06d4b7}
+
+
+Create a Binary Heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns void 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!binomial\+\_\+heap@{binomial\+\_\+heap}}
+\index{binomial\+\_\+heap@{binomial\+\_\+heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{binomial\+\_\+heap()}{binomial_heap()}}]{\setlength{\rightskip}{0pt plus 5cm}void binomial\+\_\+heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a65b63d3256f123d625130e6a4bb2181f}{}\label{dijkstra_8cpp_a65b63d3256f123d625130e6a4bb2181f}
+
+
+Create a Binomial Heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns void 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!delete\+Binary\+Heap@{delete\+Binary\+Heap}}
+\index{delete\+Binary\+Heap@{delete\+Binary\+Heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{delete\+Binary\+Heap()}{deleteBinaryHeap()}}]{\setlength{\rightskip}{0pt plus 5cm}pair$<$int,int$>$ delete\+Binary\+Heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_af2de7bf96c6575abe364eec181958d1f}{}\label{dijkstra_8cpp_af2de7bf96c6575abe364eec181958d1f}
+
+
+Obtains the lowest value from the heap and deleted the node and then heapifies the binary heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns the deleted (minimum-\/valued) node 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!fibonacci\+\_\+heap@{fibonacci\+\_\+heap}}
+\index{fibonacci\+\_\+heap@{fibonacci\+\_\+heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{fibonacci\+\_\+heap()}{fibonacci_heap()}}]{\setlength{\rightskip}{0pt plus 5cm}void fibonacci\+\_\+heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a5a1be60286c4d631fcdc294d63406f90}{}\label{dijkstra_8cpp_a5a1be60286c4d631fcdc294d63406f90}
+
+
+Create a F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns void 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Left(int index)}{getLeft(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Left (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_aa27ffacff065847b3421ace4958ea782}{}\label{dijkstra_8cpp_aa27ffacff065847b3421ace4958ea782}
+
+
+Gets the left child index of a given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the node whose left child is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the index of the left child of the given node 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Right(int index)}{getRight(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Right (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a55aa54819a680f161719d3c18028a7f8}{}\label{dijkstra_8cpp_a55aa54819a680f161719d3c18028a7f8}
+
+
+Gets the right child index of a given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the node whose right child is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the index of the right child of the given node 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!heapify\+Down\+Binary\+Heap@{heapify\+Down\+Binary\+Heap}}
+\index{heapify\+Down\+Binary\+Heap@{heapify\+Down\+Binary\+Heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{heapify\+Down\+Binary\+Heap(int index)}{heapifyDownBinaryHeap(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void heapify\+Down\+Binary\+Heap (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a9e95a41df12e4ca165a350fca66659e4}{}\label{dijkstra_8cpp_a9e95a41df12e4ca165a350fca66659e4}
+
+
+Heapify the binary heap after Deleion Operation (Sort) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the node from which the the heapify operation begins, called the function with parameter 0 initially \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn\textquotesingle{}t return anything, void 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!heapify\+Up\+Binary\+Heap@{heapify\+Up\+Binary\+Heap}}
+\index{heapify\+Up\+Binary\+Heap@{heapify\+Up\+Binary\+Heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{heapify\+Up\+Binary\+Heap(int index)}{heapifyUpBinaryHeap(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void heapify\+Up\+Binary\+Heap (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_af96b1b6618a0c4cfd630ea59e8506bd0}{}\label{dijkstra_8cpp_af96b1b6618a0c4cfd630ea59e8506bd0}
+
+
+Heapifies the given binary heap after insertion or deletion. Min Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the node where any operation was made \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn\textquotesingle{}t return anything, void 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!insert\+Binary\+Heap@{insert\+Binary\+Heap}}
+\index{insert\+Binary\+Heap@{insert\+Binary\+Heap}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{insert\+Binary\+Heap(pair$<$ int, int $>$ element)}{insertBinaryHeap(pair< int, int > element)}}]{\setlength{\rightskip}{0pt plus 5cm}void insert\+Binary\+Heap (
+\begin{DoxyParamCaption}
+\item[{pair$<$ int, int $>$}]{element}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a9ab56ec361175aa7ab085057afb804bc}{}\label{dijkstra_8cpp_a9ab56ec361175aa7ab085057afb804bc}
+
+
+Insertion of a new node in the given Binary Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & the value and the index of the new node to be inserted combined in pair data structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Doesn\textquotesingle{}t return anything, void 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!main@{main}}
+\index{main@{main}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{dijkstra_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+The Main Function of the Program. 
+
+\begin{DoxyReturn}{Returns}
+Return int value 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!parent@{parent}}
+\index{parent@{parent}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{parent(int index)}{parent(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int parent (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_ab0f4486e55f1ff205438507d914d87e1}{}\label{dijkstra_8cpp_ab0f4486e55f1ff205438507d914d87e1}
+
+
+Finds the parent of a node in a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the node whose parent is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the index of the parent if it exist, if the node is the root, then returns -\/1 
+\end{DoxyReturn}
+\index{dijkstra.\+cpp@{dijkstra.\+cpp}!value@{value}}
+\index{value@{value}!dijkstra.\+cpp@{dijkstra.\+cpp}}
+\subsubsection[{\texorpdfstring{value(int index)}{value(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int value (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{dijkstra_8cpp_a433986963774dd5b1a942a7fa6b9a07f}{}\label{dijkstra_8cpp_a433986963774dd5b1a942a7fa6b9a07f}
+
+
+Returns the value of the node for a fiven index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the node whose value is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the value of the node for the given index 
+\end{DoxyReturn}

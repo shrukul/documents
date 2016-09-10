@@ -14,9 +14,9 @@ class Graph:
 
   def add_edge(self, from_node, to_node, distance):
     self.edges[from_node].append(to_node)
-    self.edges[to_node].append(from_node)
+#    self.edges[to_node].append(from_node)
     self.distances[(from_node, to_node)] = distance
-    self.distances[(to_node), from_node] = distance
+#    self.distances[(to_node), from_node] = distance
 
 def getPath(path, node, lis):
   lis.append(node)
@@ -77,14 +77,14 @@ def dijsktra(graph, initial):
 
 
 
-reader=csv.reader(open("finalMatrix.txt","rb"),delimiter=',')
+reader=csv.reader(open("video56.txt","rb"),delimiter=',')
 x=list(reader)
 result=numpy.array(x).astype('float')
 
 rows = len(result)
 cols = len(result[42])
 
-print rows, cols
+#print rows, cols
 
 i=1
 graph = Graph()
@@ -124,6 +124,7 @@ while c < cols:
   c += 1
 
 visited, path = dijsktra(graph, 1)
+#print path
 vis = {}
 
 c = cols - 1
@@ -137,9 +138,10 @@ cell = min(vis.iteritems(), key=itemgetter(1))
 
 lis = []
 
-nodesList = getPath(path,18810,lis)
+#nodesList = getPath(path,18810,lis)
+nodesList = getPath(path,36300,lis)
 
-print nodesList
+#print nodesList
 coordinateList=[]
 for each in nodesList:
   row,column= coord(each, rows, cols)
@@ -147,6 +149,13 @@ for each in nodesList:
   dicPathcoord['frame1']=row
   dicPathcoord['frame2']=column
   coordinateList.append(dicPathcoord)
-newlist = sorted(coordinateList, key=lambda k: k['frame1'])
-createVideos(newlist,rows,cols)
+newlist = sorted(coordinateList, key=lambda k: k['frame2'])
+newlist = sorted(newlist, key=lambda k: k['frame1'])
+#print newlist
+print '#############################################################'
+print newlist
+#with open('test56.txt','w') as f:
+#    for item in coordinateList:
+#        f.write("{}\n".format(item))
+#createVideos(newlist,rows,cols)
 

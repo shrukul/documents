@@ -1,0 +1,359 @@
+\hypertarget{classFibonacciHeap}{}\section{Fibonacci\+Heap Class Reference}
+\label{classFibonacciHeap}\index{Fibonacci\+Heap@{Fibonacci\+Heap}}
+
+
+Fibonacci Heap Data Structure class.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnodef}{nodef} $\ast$ \hyperlink{classFibonacciHeap_a4ce8acd46859e11a32a60bc5da633c54}{Initialize\+Heap} ()
+\begin{DoxyCompactList}\small\item\em Initialization of the F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_a2d1913354a902b39426c5a8c1ab1ae2b}{Fibonnaci\+\_\+link} (\hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Linking the nodes in a F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnodef}{nodef} $\ast$ \hyperlink{classFibonacciHeap_aed5f96128e896fbd90ae3bf14c96cc58}{Create\+\_\+node} (int, int)
+\begin{DoxyCompactList}\small\item\em Creation of a new Node of a F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnodef}{nodef} $\ast$ \hyperlink{classFibonacciHeap_a4a1714ab8218b63bb2c1491cb5459973}{Insert} (\hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Inserting new node to the existing F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnodef}{nodef} $\ast$ \hyperlink{classFibonacciHeap_ab7bee1fa4224c3a70c9bf5b7f282b50f}{Union} (\hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Unifying F\+I\+B\+O\+N\+A\+C\+CI Heaps. \end{DoxyCompactList}\item 
+\hyperlink{structnodef}{nodef} $\ast$ \hyperlink{classFibonacciHeap_a532230bf1688291111504c863d35cb08}{Extract\+\_\+\+Min} (\hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Extract the Min Node from the existing F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+void \hyperlink{classFibonacciHeap_a142cff5b1af93a67cd2aad28b5b1ff4e}{pop} ()
+\begin{DoxyCompactList}\small\item\em Pops the node with the min value in the heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_a21a62f4d430667d9ffba329e7d2d013f}{top} ()
+\begin{DoxyCompactList}\small\item\em Returns the index of the node with the least value in the Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_ab9d2359569f454390af246409a48a6a3}{Consolidate} (\hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Consolidate the node in F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_ac457628267008b428d6b0105496dba45}{Display} (\hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Displays the elements of the F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnodef}{nodef} $\ast$ \hyperlink{classFibonacciHeap_adbfcc840c7537cdeb0ba9a9ec0b68888}{Find} (\hyperlink{structnodef}{nodef} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Finds a node with value k in the F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_a9e34368cfd6bdd838e958d5df54420cc}{Decrease\+\_\+key} (\hyperlink{structnodef}{nodef} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em Decrease the key value of a given node. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_af12f046465c394bf31247fff4ed02706}{Delete\+\_\+key} (\hyperlink{structnodef}{nodef} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Deletes a node in F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_a7525481845ab2948a6fbb289bd42e5bd}{Cut} (\hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Cuts the F\+I\+B\+O\+N\+A\+C\+CI Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classFibonacciHeap_ae2e9049f8e38c113b6cbd4a325f29d09}{Cascase\+\_\+cut} (\hyperlink{structnodef}{nodef} $\ast$, \hyperlink{structnodef}{nodef} $\ast$)
+\begin{DoxyCompactList}\small\item\em Cascade the Fibonnaci Heap cuts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fibonacci Heap Data Structure class. 
+
+\subsection{Member Function Documentation}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Cascase\+\_\+cut@{Cascase\+\_\+cut}}
+\index{Cascase\+\_\+cut@{Cascase\+\_\+cut}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Cascase\+\_\+cut(nodef $\ast$, nodef $\ast$)}{Cascase_cut(nodef *, nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Cascase\+\_\+cut (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1, }
+\item[{{\bf nodef} $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_ae2e9049f8e38c113b6cbd4a325f29d09}{}\label{classFibonacciHeap_ae2e9049f8e38c113b6cbd4a325f29d09}
+
+
+Cascade the Fibonnaci Heap cuts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em y} & The pointer to the another F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int value 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Consolidate@{Consolidate}}
+\index{Consolidate@{Consolidate}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Consolidate(nodef $\ast$)}{Consolidate(nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Consolidate (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_ab9d2359569f454390af246409a48a6a3}{}\label{classFibonacciHeap_ab9d2359569f454390af246409a48a6a3}
+
+
+Consolidate the node in F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int value 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Create\+\_\+node@{Create\+\_\+node}}
+\index{Create\+\_\+node@{Create\+\_\+node}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Create\+\_\+node(int, int)}{Create_node(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nodef} $\ast$ Fibonacci\+Heap\+::\+Create\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_aed5f96128e896fbd90ae3bf14c96cc58}{}\label{classFibonacciHeap_aed5f96128e896fbd90ae3bf14c96cc58}
+
+
+Creation of a new Node of a F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value of the new node to be inserted \\
+\hline
+{\em ind} & The index of the new node to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer to the newly created node 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Cut@{Cut}}
+\index{Cut@{Cut}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Cut(nodef $\ast$, nodef $\ast$, nodef $\ast$)}{Cut(nodef *, nodef *, nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Cut (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1, }
+\item[{{\bf nodef} $\ast$}]{x, }
+\item[{{\bf nodef} $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a7525481845ab2948a6fbb289bd42e5bd}{}\label{classFibonacciHeap_a7525481845ab2948a6fbb289bd42e5bd}
+
+
+Cuts the F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em x} & The pointer to the another F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em y} & The pointer to the third F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int value 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Decrease\+\_\+key@{Decrease\+\_\+key}}
+\index{Decrease\+\_\+key@{Decrease\+\_\+key}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Decrease\+\_\+key(nodef $\ast$, int, int)}{Decrease_key(nodef *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Decrease\+\_\+key (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1, }
+\item[{int}]{x, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a9e34368cfd6bdd838e958d5df54420cc}{}\label{classFibonacciHeap_a9e34368cfd6bdd838e958d5df54420cc}
+
+
+Decrease the key value of a given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer to the existing F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em x} & The value of the node to be decreased \\
+\hline
+{\em k} & The user entered value of the new key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int value 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Delete\+\_\+key@{Delete\+\_\+key}}
+\index{Delete\+\_\+key@{Delete\+\_\+key}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Delete\+\_\+key(nodef $\ast$, int)}{Delete_key(nodef *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Delete\+\_\+key (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_af12f046465c394bf31247fff4ed02706}{}\label{classFibonacciHeap_af12f046465c394bf31247fff4ed02706}
+
+
+Deletes a node in F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em x} & The node with value k gets deleted \\
+\hline
+{\em y} & The pointer to the third F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if key not found 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Display@{Display}}
+\index{Display@{Display}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Display(nodef $\ast$)}{Display(nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Display (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_ac457628267008b428d6b0105496dba45}{}\label{classFibonacciHeap_ac457628267008b428d6b0105496dba45}
+
+
+Displays the elements of the F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if Heap is empty 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Extract\+\_\+\+Min@{Extract\+\_\+\+Min}}
+\index{Extract\+\_\+\+Min@{Extract\+\_\+\+Min}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Extract\+\_\+\+Min(nodef $\ast$)}{Extract_Min(nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nodef} $\ast$ Fibonacci\+Heap\+::\+Extract\+\_\+\+Min (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a532230bf1688291111504c863d35cb08}{}\label{classFibonacciHeap_a532230bf1688291111504c863d35cb08}
+
+
+Extract the Min Node from the existing F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the minimum node 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Fibonnaci\+\_\+link@{Fibonnaci\+\_\+link}}
+\index{Fibonnaci\+\_\+link@{Fibonnaci\+\_\+link}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Fibonnaci\+\_\+link(nodef $\ast$, nodef $\ast$, nodef $\ast$)}{Fibonnaci_link(nodef *, nodef *, nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::\+Fibonnaci\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1, }
+\item[{{\bf nodef} $\ast$}]{y, }
+\item[{{\bf nodef} $\ast$}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a2d1913354a902b39426c5a8c1ab1ae2b}{}\label{classFibonacciHeap_a2d1913354a902b39426c5a8c1ab1ae2b}
+
+
+Linking the nodes in a F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em y} & The node to be merged with z \\
+\hline
+{\em z} & Add new Children to this node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the new Root of the F\+I\+B\+O\+N\+A\+C\+CI Heap 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Find@{Find}}
+\index{Find@{Find}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Find(nodef $\ast$, int)}{Find(nodef *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nodef} $\ast$ Fibonacci\+Heap\+::\+Find (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_adbfcc840c7537cdeb0ba9a9ec0b68888}{}\label{classFibonacciHeap_adbfcc840c7537cdeb0ba9a9ec0b68888}
+
+
+Finds a node with value k in the F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em k} & The value of the node to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer to the node if found, N\+U\+LL otherwise 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Initialize\+Heap@{Initialize\+Heap}}
+\index{Initialize\+Heap@{Initialize\+Heap}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Initialize\+Heap()}{InitializeHeap()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nodef} $\ast$ Fibonacci\+Heap\+::\+Initialize\+Heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a4ce8acd46859e11a32a60bc5da633c54}{}\label{classFibonacciHeap_a4ce8acd46859e11a32a60bc5da633c54}
+
+
+Initialization of the F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns the pointer to the root of the new F\+I\+B\+O\+N\+A\+C\+CI Heap 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Insert@{Insert}}
+\index{Insert@{Insert}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Insert(nodef $\ast$, nodef $\ast$)}{Insert(nodef *, nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nodef} $\ast$ Fibonacci\+Heap\+::\+Insert (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H, }
+\item[{{\bf nodef} $\ast$}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a4a1714ab8218b63bb2c1491cb5459973}{}\label{classFibonacciHeap_a4a1714ab8218b63bb2c1491cb5459973}
+
+
+Inserting new node to the existing F\+I\+B\+O\+N\+A\+C\+CI Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em x} & The pointer to the newly created node to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the new Root of the F\+I\+B\+O\+N\+A\+C\+CI Heap 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!pop@{pop}}
+\index{pop@{pop}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{pop()}{pop()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fibonacci\+Heap\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a142cff5b1af93a67cd2aad28b5b1ff4e}{}\label{classFibonacciHeap_a142cff5b1af93a67cd2aad28b5b1ff4e}
+
+
+Pops the node with the min value in the heap. 
+
+\begin{DoxyReturn}{Returns}
+Doesn\textquotesingle{}t return anything, void 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!top@{top}}
+\index{top@{top}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{top()}{top()}}]{\setlength{\rightskip}{0pt plus 5cm}int Fibonacci\+Heap\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_a21a62f4d430667d9ffba329e7d2d013f}{}\label{classFibonacciHeap_a21a62f4d430667d9ffba329e7d2d013f}
+
+
+Returns the index of the node with the least value in the Heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns the index of the node with least value 
+\end{DoxyReturn}
+\index{Fibonacci\+Heap@{Fibonacci\+Heap}!Union@{Union}}
+\index{Union@{Union}!Fibonacci\+Heap@{Fibonacci\+Heap}}
+\subsubsection[{\texorpdfstring{Union(nodef $\ast$, nodef $\ast$)}{Union(nodef *, nodef *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf nodef} $\ast$ Fibonacci\+Heap\+::\+Union (
+\begin{DoxyParamCaption}
+\item[{{\bf nodef} $\ast$}]{H1, }
+\item[{{\bf nodef} $\ast$}]{H2}
+\end{DoxyParamCaption}
+)}\hypertarget{classFibonacciHeap_ab7bee1fa4224c3a70c9bf5b7f282b50f}{}\label{classFibonacciHeap_ab7bee1fa4224c3a70c9bf5b7f282b50f}
+
+
+Unifying F\+I\+B\+O\+N\+A\+C\+CI Heaps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer of the Root node of the F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+{\em H2} & The pointer to the another F\+I\+B\+O\+N\+A\+C\+CI Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the new Root of the F\+I\+B\+O\+N\+A\+C\+CI Heap 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dijkstra_8cpp}{dijkstra.\+cpp}\end{DoxyCompactItemize}

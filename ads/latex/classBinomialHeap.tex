@@ -1,0 +1,298 @@
+\hypertarget{classBinomialHeap}{}\section{Binomial\+Heap Class Reference}
+\label{classBinomialHeap}\index{Binomial\+Heap@{Binomial\+Heap}}
+
+
+Binomial Heap Data Structure class.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_a3ffaab6756189d14dd76e4e7a48147b6}{Initializeheap} ()
+\begin{DoxyCompactList}\small\item\em Initialize the Binomial Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classBinomialHeap_a657d892542f95da35f386fbe35564a35}{Binomial\+\_\+link} (\hyperlink{structnode}{node} $\ast$, \hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Adds edges between two nodes of a tree and makes appropriate changes in parent,child, sibling and degree parameters. \end{DoxyCompactList}\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_a1389155b4ab14754a43d0d27b67e20d0}{Create\+\_\+node} (int, int)
+\begin{DoxyCompactList}\small\item\em Creates a new node and assigns value and the index. \end{DoxyCompactList}\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_aea4c422323bcafcedb9168c86adadfa8}{Union} (\hyperlink{structnode}{node} $\ast$, \hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Union of the the two Binomial Heaps. \end{DoxyCompactList}\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_a762a7e29d6bea85540f1a82cbca4a062}{Insert} (\hyperlink{structnode}{node} $\ast$, \hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Insertion of a new Binomial Tree in the Binomial Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_ade996e0273f3fcfa92b4dcce69ed111b}{Merge} (\hyperlink{structnode}{node} $\ast$, \hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Merging of the nodes of the given Binomial Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_a71e1468e2782db3f2322d188bca1e48a}{Extract\+\_\+\+Min} (\hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Extract the minimum from the Binomial Heap. \end{DoxyCompactList}\item 
+void {\bfseries pop} (\hyperlink{structnode}{node} $\ast$)\hypertarget{classBinomialHeap_ac44cc9f1ec94c2150a71b3ffead9c49a}{}\label{classBinomialHeap_ac44cc9f1ec94c2150a71b3ffead9c49a}
+
+\item 
+int \hyperlink{classBinomialHeap_a59481a0ec3750711c68e9ddd21443707}{Revert\+\_\+list} (\hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Reverts the Binomial Heap list. \end{DoxyCompactList}\item 
+int \hyperlink{classBinomialHeap_a43b3339eb8cc6eea26f769ab616b720a}{Display} (\hyperlink{structnode}{node} $\ast$)
+\begin{DoxyCompactList}\small\item\em Display the nodes of the Binomial Heap. \end{DoxyCompactList}\item 
+\hyperlink{structnode}{node} $\ast$ \hyperlink{classBinomialHeap_a5066787434a932210311500f671d2202}{Search} (\hyperlink{structnode}{node} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Search for a node in the given Binomial Heap. \end{DoxyCompactList}\item 
+int \hyperlink{classBinomialHeap_a3898a1fb87677fdb94a40f62ac416de9}{Decrease\+\_\+key} (\hyperlink{structnode}{node} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em Decrease the key value of a given node. \end{DoxyCompactList}\item 
+int \hyperlink{classBinomialHeap_aab7ea7e42fe1b2aaf3298f73f4e68884}{Delete} (\hyperlink{structnode}{node} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Delete a given node from the Binomial Heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Binomial Heap Data Structure class. 
+
+\subsection{Member Function Documentation}
+\index{Binomial\+Heap@{Binomial\+Heap}!Binomial\+\_\+link@{Binomial\+\_\+link}}
+\index{Binomial\+\_\+link@{Binomial\+\_\+link}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Binomial\+\_\+link(node $\ast$, node $\ast$)}{Binomial_link(node *, node *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Binomial\+Heap\+::\+Binomial\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{y, }
+\item[{{\bf node} $\ast$}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a657d892542f95da35f386fbe35564a35}{}\label{classBinomialHeap_a657d892542f95da35f386fbe35564a35}
+
+
+Adds edges between two nodes of a tree and makes appropriate changes in parent,child, sibling and degree parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & pointer of the child node \\
+\hline
+{\em z} & pointer of it\textquotesingle{}s parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Create\+\_\+node@{Create\+\_\+node}}
+\index{Create\+\_\+node@{Create\+\_\+node}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Create\+\_\+node(int, int)}{Create_node(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Create\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{int}]{k, }
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a1389155b4ab14754a43d0d27b67e20d0}{}\label{classBinomialHeap_a1389155b4ab14754a43d0d27b67e20d0}
+
+
+Creates a new node and assigns value and the index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Value of the node \\
+\hline
+{\em ind} & index of the new node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the newly created node 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Decrease\+\_\+key@{Decrease\+\_\+key}}
+\index{Decrease\+\_\+key@{Decrease\+\_\+key}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Decrease\+\_\+key(node $\ast$, int, int)}{Decrease_key(node *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Binomial\+Heap\+::\+Decrease\+\_\+key (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H, }
+\item[{int}]{i, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a3898a1fb87677fdb94a40f62ac416de9}{}\label{classBinomialHeap_a3898a1fb87677fdb94a40f62ac416de9}
+
+
+Decrease the key value of a given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer to the existing Binomial Heap \\
+\hline
+{\em i} & The value of the node to be decreased \\
+\hline
+{\em k} & The user entered value of the new key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int value 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Delete@{Delete}}
+\index{Delete@{Delete}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Delete(node $\ast$, int)}{Delete(node *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Binomial\+Heap\+::\+Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_aab7ea7e42fe1b2aaf3298f73f4e68884}{}\label{classBinomialHeap_aab7ea7e42fe1b2aaf3298f73f4e68884}
+
+
+Delete a given node from the Binomial Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer of Root node of the Heap \\
+\hline
+{\em k} & The value of the node to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if the node is not found 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Display@{Display}}
+\index{Display@{Display}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Display(node $\ast$)}{Display(node *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Binomial\+Heap\+::\+Display (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a43b3339eb8cc6eea26f769ab616b720a}{}\label{classBinomialHeap_a43b3339eb8cc6eea26f769ab616b720a}
+
+
+Display the nodes of the Binomial Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer to the Binomial Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if the Heap is empty, 1 otherwise 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Extract\+\_\+\+Min@{Extract\+\_\+\+Min}}
+\index{Extract\+\_\+\+Min@{Extract\+\_\+\+Min}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Extract\+\_\+\+Min(node $\ast$)}{Extract_Min(node *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Extract\+\_\+\+Min (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H1}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a71e1468e2782db3f2322d188bca1e48a}{}\label{classBinomialHeap_a71e1468e2782db3f2322d188bca1e48a}
+
+
+Extract the minimum from the Binomial Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer to the Binomial Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the new Binomial Heap Root 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Initializeheap@{Initializeheap}}
+\index{Initializeheap@{Initializeheap}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Initializeheap()}{Initializeheap()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Initializeheap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a3ffaab6756189d14dd76e4e7a48147b6}{}\label{classBinomialHeap_a3ffaab6756189d14dd76e4e7a48147b6}
+
+
+Initialize the Binomial Heap. 
+
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the root node 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Insert@{Insert}}
+\index{Insert@{Insert}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Insert(node $\ast$, node $\ast$)}{Insert(node *, node *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Insert (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H, }
+\item[{{\bf node} $\ast$}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a762a7e29d6bea85540f1a82cbca4a062}{}\label{classBinomialHeap_a762a7e29d6bea85540f1a82cbca4a062}
+
+
+Insertion of a new Binomial Tree in the Binomial Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer to the existing Heap \\
+\hline
+{\em x} & The pointer to the new Binomial Tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the final Binomial Heap 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Merge@{Merge}}
+\index{Merge@{Merge}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Merge(node $\ast$, node $\ast$)}{Merge(node *, node *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Merge (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H1, }
+\item[{{\bf node} $\ast$}]{H2}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_ade996e0273f3fcfa92b4dcce69ed111b}{}\label{classBinomialHeap_ade996e0273f3fcfa92b4dcce69ed111b}
+
+
+Merging of the nodes of the given Binomial Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer to the existing Heap \\
+\hline
+{\em H2} & The pointer to the new Binomial Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the final Binomial Heap 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Revert\+\_\+list@{Revert\+\_\+list}}
+\index{Revert\+\_\+list@{Revert\+\_\+list}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Revert\+\_\+list(node $\ast$)}{Revert_list(node *)}}]{\setlength{\rightskip}{0pt plus 5cm}int Binomial\+Heap\+::\+Revert\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a59481a0ec3750711c68e9ddd21443707}{}\label{classBinomialHeap_a59481a0ec3750711c68e9ddd21443707}
+
+
+Reverts the Binomial Heap list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The pointer of the given node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns int value 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Search@{Search}}
+\index{Search@{Search}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Search(node $\ast$, int)}{Search(node *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Search (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_a5066787434a932210311500f671d2202}{}\label{classBinomialHeap_a5066787434a932210311500f671d2202}
+
+
+Search for a node in the given Binomial Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H} & The pointer of the Heap, passed the value of the Root node \\
+\hline
+{\em k} & The value of the node to be Searched For \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the required node if found, else N\+U\+LL otherwise 
+\end{DoxyReturn}
+\index{Binomial\+Heap@{Binomial\+Heap}!Union@{Union}}
+\index{Union@{Union}!Binomial\+Heap@{Binomial\+Heap}}
+\subsubsection[{\texorpdfstring{Union(node $\ast$, node $\ast$)}{Union(node *, node *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node} $\ast$ Binomial\+Heap\+::\+Union (
+\begin{DoxyParamCaption}
+\item[{{\bf node} $\ast$}]{H1, }
+\item[{{\bf node} $\ast$}]{H2}
+\end{DoxyParamCaption}
+)}\hypertarget{classBinomialHeap_aea4c422323bcafcedb9168c86adadfa8}{}\label{classBinomialHeap_aea4c422323bcafcedb9168c86adadfa8}
+
+
+Union of the the two Binomial Heaps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em H1} & The pointer to the existing Heap \\
+\hline
+{\em H2} & The pointer to the new Binomial Heap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the pointer of the final Binomial Heap 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dijkstra_8cpp}{dijkstra.\+cpp}\end{DoxyCompactItemize}

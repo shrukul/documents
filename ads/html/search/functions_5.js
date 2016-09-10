@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['succ',['succ',['../red__black__tree_8c.html#a832bde6c280220c1d6ab2bb7dc3b9c37',1,'red_black_tree.c']]]
+  ['getleft',['getLeft',['../dijkstra_8cpp.html#aa27ffacff065847b3421ace4958ea782',1,'dijkstra.cpp']]],
+  ['getright',['getRight',['../dijkstra_8cpp.html#a55aa54819a680f161719d3c18028a7f8',1,'dijkstra.cpp']]]
 ];

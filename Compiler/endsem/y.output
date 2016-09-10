@@ -1,0 +1,953 @@
+Terminals unused in grammar
+
+   EQ
+   LT
+   LE
+   GT
+   GE
+   NE
+
+
+State 0 conflicts: 3 shift/reduce, 1 reduce/reduce
+State 18 conflicts: 1 shift/reduce
+State 28 conflicts: 1 shift/reduce
+State 63 conflicts: 4 shift/reduce
+State 64 conflicts: 4 shift/reduce
+State 65 conflicts: 4 shift/reduce
+State 66 conflicts: 4 shift/reduce
+
+
+Grammar
+
+    0 $accept: program $end
+
+    1 program: program module
+    2        | module
+    3        | %empty
+
+    4 module: func_decl
+    5       | func_defn
+
+    6 func_decl: decl LPAREN arg_seq RPAREN SEMI
+
+    7 func_defn: decl LPAREN arg_seq RPAREN block
+
+    8 decl: decl_type IDENTIFIER
+
+    9 decl_type: INTEGER
+   10          | REAL
+   11          | CHAR
+   12          | %empty
+
+   13 arg_seq: arg_seq COMMA decl
+   14        | decl
+   15        | %empty
+
+   16 block: LBRACE stmt_seq RBRACE
+
+   17 stmt_seq: stmt_seq stmt
+   18         | stmt
+
+   19 stmt: declaration SEMI
+   20     | expr SEMI
+   21     | assignment SEMI
+   22     | return_st SEMI
+
+   23 declaration: decl_type decl_seq
+   24            | decl_type decl_chain
+
+   25 decl_chain: decl_chain COMMA decl_as
+   26           | decl_as
+
+   27 decl_as: IDENTIFIER ASSIGN expr
+
+   28 decl_seq: decl_seq COMMA IDENTIFIER
+   29         | IDENTIFIER
+
+   30 assignment: IDENTIFIER ASSIGN expr
+
+   31 expr: expr ADD expr
+   32     | expr SUB expr
+   33     | expr MULT expr
+   34     | expr DIV expr
+   35     | LPAREN expr RPAREN
+   36     | term
+   37     | func_call
+
+   38 func_call: IDENTIFIER LPAREN call_seq RPAREN
+
+   39 call_seq: call_seq COMMA term
+   40         | term
+   41         | %empty
+
+   42 return_st: RETURN
+   43          | RETURN term
+
+   44 term: IDENTIFIER
+   45     | INT
+   46     | FLOAT
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+IDENTIFIER (258) 8 27 28 29 30 38 44
+INTEGER (259) 9
+REAL (260) 10
+CHAR (261) 11
+FLOAT (262) 46
+INT (263) 45
+RETURN (264) 42 43
+ADD (265) 31
+SUB (266) 32
+MULT (267) 33
+DIV (268) 34
+EQ (269)
+ASSIGN (270) 27 30
+LT (271)
+LE (272)
+GT (273)
+GE (274)
+NE (275)
+LPAREN (276) 6 7 35 38
+RPAREN (277) 6 7 35 38
+LBRACE (278) 16
+RBRACE (279) 16
+COMMA (280) 13 25 28 39
+SEMI (281) 6 19 20 21 22
+
+
+Nonterminals, with rules where they appear
+
+$accept (27)
+    on left: 0
+program (28)
+    on left: 1 2 3, on right: 0 1
+module (29)
+    on left: 4 5, on right: 1 2
+func_decl (30)
+    on left: 6, on right: 4
+func_defn (31)
+    on left: 7, on right: 5
+decl (32)
+    on left: 8, on right: 6 7 13 14
+decl_type (33)
+    on left: 9 10 11 12, on right: 8 23 24
+arg_seq (34)
+    on left: 13 14 15, on right: 6 7 13
+block (35)
+    on left: 16, on right: 7
+stmt_seq (36)
+    on left: 17 18, on right: 16 17
+stmt (37)
+    on left: 19 20 21 22, on right: 17 18
+declaration (38)
+    on left: 23 24, on right: 19
+decl_chain (39)
+    on left: 25 26, on right: 24 25
+decl_as (40)
+    on left: 27, on right: 25 26
+decl_seq (41)
+    on left: 28 29, on right: 23 28
+assignment (42)
+    on left: 30, on right: 21
+expr (43)
+    on left: 31 32 33 34 35 36 37, on right: 20 27 30 31 32 33 34 35
+func_call (44)
+    on left: 38, on right: 37
+call_seq (45)
+    on left: 39 40 41, on right: 38 39
+return_st (46)
+    on left: 42 43, on right: 22
+term (47)
+    on left: 44 45 46, on right: 36 39 40 43
+
+
+State 0
+
+    0 $accept: . program $end
+
+    INTEGER  shift, and go to state 1
+    REAL     shift, and go to state 2
+    CHAR     shift, and go to state 3
+
+    IDENTIFIER  reduce using rule 3 (program)
+    IDENTIFIER  [reduce using rule 12 (decl_type)]
+    INTEGER     [reduce using rule 3 (program)]
+    REAL        [reduce using rule 3 (program)]
+    CHAR        [reduce using rule 3 (program)]
+    $default    reduce using rule 3 (program)
+
+    program    go to state 4
+    module     go to state 5
+    func_decl  go to state 6
+    func_defn  go to state 7
+    decl       go to state 8
+    decl_type  go to state 9
+
+
+State 1
+
+    9 decl_type: INTEGER .
+
+    $default  reduce using rule 9 (decl_type)
+
+
+State 2
+
+   10 decl_type: REAL .
+
+    $default  reduce using rule 10 (decl_type)
+
+
+State 3
+
+   11 decl_type: CHAR .
+
+    $default  reduce using rule 11 (decl_type)
+
+
+State 4
+
+    0 $accept: program . $end
+    1 program: program . module
+
+    $end     shift, and go to state 10
+    INTEGER  shift, and go to state 1
+    REAL     shift, and go to state 2
+    CHAR     shift, and go to state 3
+
+    $default  reduce using rule 12 (decl_type)
+
+    module     go to state 11
+    func_decl  go to state 6
+    func_defn  go to state 7
+    decl       go to state 8
+    decl_type  go to state 9
+
+
+State 5
+
+    2 program: module .
+
+    $default  reduce using rule 2 (program)
+
+
+State 6
+
+    4 module: func_decl .
+
+    $default  reduce using rule 4 (module)
+
+
+State 7
+
+    5 module: func_defn .
+
+    $default  reduce using rule 5 (module)
+
+
+State 8
+
+    6 func_decl: decl . LPAREN arg_seq RPAREN SEMI
+    7 func_defn: decl . LPAREN arg_seq RPAREN block
+
+    LPAREN  shift, and go to state 12
+
+
+State 9
+
+    8 decl: decl_type . IDENTIFIER
+
+    IDENTIFIER  shift, and go to state 13
+
+
+State 10
+
+    0 $accept: program $end .
+
+    $default  accept
+
+
+State 11
+
+    1 program: program module .
+
+    $default  reduce using rule 1 (program)
+
+
+State 12
+
+    6 func_decl: decl LPAREN . arg_seq RPAREN SEMI
+    7 func_defn: decl LPAREN . arg_seq RPAREN block
+
+    INTEGER  shift, and go to state 1
+    REAL     shift, and go to state 2
+    CHAR     shift, and go to state 3
+
+    IDENTIFIER  reduce using rule 12 (decl_type)
+    $default    reduce using rule 15 (arg_seq)
+
+    decl       go to state 14
+    decl_type  go to state 9
+    arg_seq    go to state 15
+
+
+State 13
+
+    8 decl: decl_type IDENTIFIER .
+
+    $default  reduce using rule 8 (decl)
+
+
+State 14
+
+   14 arg_seq: decl .
+
+    $default  reduce using rule 14 (arg_seq)
+
+
+State 15
+
+    6 func_decl: decl LPAREN arg_seq . RPAREN SEMI
+    7 func_defn: decl LPAREN arg_seq . RPAREN block
+   13 arg_seq: arg_seq . COMMA decl
+
+    RPAREN  shift, and go to state 16
+    COMMA   shift, and go to state 17
+
+
+State 16
+
+    6 func_decl: decl LPAREN arg_seq RPAREN . SEMI
+    7 func_defn: decl LPAREN arg_seq RPAREN . block
+
+    LBRACE  shift, and go to state 18
+    SEMI    shift, and go to state 19
+
+    block  go to state 20
+
+
+State 17
+
+   13 arg_seq: arg_seq COMMA . decl
+
+    INTEGER  shift, and go to state 1
+    REAL     shift, and go to state 2
+    CHAR     shift, and go to state 3
+
+    $default  reduce using rule 12 (decl_type)
+
+    decl       go to state 21
+    decl_type  go to state 9
+
+
+State 18
+
+   16 block: LBRACE . stmt_seq RBRACE
+
+    IDENTIFIER  shift, and go to state 22
+    INTEGER     shift, and go to state 1
+    REAL        shift, and go to state 2
+    CHAR        shift, and go to state 3
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    RETURN      shift, and go to state 25
+    LPAREN      shift, and go to state 26
+
+    IDENTIFIER  [reduce using rule 12 (decl_type)]
+
+    decl_type    go to state 27
+    stmt_seq     go to state 28
+    stmt         go to state 29
+    declaration  go to state 30
+    assignment   go to state 31
+    expr         go to state 32
+    func_call    go to state 33
+    return_st    go to state 34
+    term         go to state 35
+
+
+State 19
+
+    6 func_decl: decl LPAREN arg_seq RPAREN SEMI .
+
+    $default  reduce using rule 6 (func_decl)
+
+
+State 20
+
+    7 func_defn: decl LPAREN arg_seq RPAREN block .
+
+    $default  reduce using rule 7 (func_defn)
+
+
+State 21
+
+   13 arg_seq: arg_seq COMMA decl .
+
+    $default  reduce using rule 13 (arg_seq)
+
+
+State 22
+
+   30 assignment: IDENTIFIER . ASSIGN expr
+   38 func_call: IDENTIFIER . LPAREN call_seq RPAREN
+   44 term: IDENTIFIER .
+
+    ASSIGN  shift, and go to state 36
+    LPAREN  shift, and go to state 37
+
+    $default  reduce using rule 44 (term)
+
+
+State 23
+
+   46 term: FLOAT .
+
+    $default  reduce using rule 46 (term)
+
+
+State 24
+
+   45 term: INT .
+
+    $default  reduce using rule 45 (term)
+
+
+State 25
+
+   42 return_st: RETURN .
+   43          | RETURN . term
+
+    IDENTIFIER  shift, and go to state 38
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+
+    $default  reduce using rule 42 (return_st)
+
+    term  go to state 39
+
+
+State 26
+
+   35 expr: LPAREN . expr RPAREN
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 41
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 27
+
+   23 declaration: decl_type . decl_seq
+   24            | decl_type . decl_chain
+
+    IDENTIFIER  shift, and go to state 42
+
+    decl_chain  go to state 43
+    decl_as     go to state 44
+    decl_seq    go to state 45
+
+
+State 28
+
+   16 block: LBRACE stmt_seq . RBRACE
+   17 stmt_seq: stmt_seq . stmt
+
+    IDENTIFIER  shift, and go to state 22
+    INTEGER     shift, and go to state 1
+    REAL        shift, and go to state 2
+    CHAR        shift, and go to state 3
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    RETURN      shift, and go to state 25
+    LPAREN      shift, and go to state 26
+    RBRACE      shift, and go to state 46
+
+    IDENTIFIER  [reduce using rule 12 (decl_type)]
+
+    decl_type    go to state 27
+    stmt         go to state 47
+    declaration  go to state 30
+    assignment   go to state 31
+    expr         go to state 32
+    func_call    go to state 33
+    return_st    go to state 34
+    term         go to state 35
+
+
+State 29
+
+   18 stmt_seq: stmt .
+
+    $default  reduce using rule 18 (stmt_seq)
+
+
+State 30
+
+   19 stmt: declaration . SEMI
+
+    SEMI  shift, and go to state 48
+
+
+State 31
+
+   21 stmt: assignment . SEMI
+
+    SEMI  shift, and go to state 49
+
+
+State 32
+
+   20 stmt: expr . SEMI
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+    SEMI  shift, and go to state 54
+
+
+State 33
+
+   37 expr: func_call .
+
+    $default  reduce using rule 37 (expr)
+
+
+State 34
+
+   22 stmt: return_st . SEMI
+
+    SEMI  shift, and go to state 55
+
+
+State 35
+
+   36 expr: term .
+
+    $default  reduce using rule 36 (expr)
+
+
+State 36
+
+   30 assignment: IDENTIFIER ASSIGN . expr
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 56
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 37
+
+   38 func_call: IDENTIFIER LPAREN . call_seq RPAREN
+
+    IDENTIFIER  shift, and go to state 38
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+
+    $default  reduce using rule 41 (call_seq)
+
+    call_seq  go to state 57
+    term      go to state 58
+
+
+State 38
+
+   44 term: IDENTIFIER .
+
+    $default  reduce using rule 44 (term)
+
+
+State 39
+
+   43 return_st: RETURN term .
+
+    $default  reduce using rule 43 (return_st)
+
+
+State 40
+
+   38 func_call: IDENTIFIER . LPAREN call_seq RPAREN
+   44 term: IDENTIFIER .
+
+    LPAREN  shift, and go to state 37
+
+    $default  reduce using rule 44 (term)
+
+
+State 41
+
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+   35     | LPAREN expr . RPAREN
+
+    ADD     shift, and go to state 50
+    SUB     shift, and go to state 51
+    MULT    shift, and go to state 52
+    DIV     shift, and go to state 53
+    RPAREN  shift, and go to state 59
+
+
+State 42
+
+   27 decl_as: IDENTIFIER . ASSIGN expr
+   29 decl_seq: IDENTIFIER .
+
+    ASSIGN  shift, and go to state 60
+
+    $default  reduce using rule 29 (decl_seq)
+
+
+State 43
+
+   24 declaration: decl_type decl_chain .
+   25 decl_chain: decl_chain . COMMA decl_as
+
+    COMMA  shift, and go to state 61
+
+    $default  reduce using rule 24 (declaration)
+
+
+State 44
+
+   26 decl_chain: decl_as .
+
+    $default  reduce using rule 26 (decl_chain)
+
+
+State 45
+
+   23 declaration: decl_type decl_seq .
+   28 decl_seq: decl_seq . COMMA IDENTIFIER
+
+    COMMA  shift, and go to state 62
+
+    $default  reduce using rule 23 (declaration)
+
+
+State 46
+
+   16 block: LBRACE stmt_seq RBRACE .
+
+    $default  reduce using rule 16 (block)
+
+
+State 47
+
+   17 stmt_seq: stmt_seq stmt .
+
+    $default  reduce using rule 17 (stmt_seq)
+
+
+State 48
+
+   19 stmt: declaration SEMI .
+
+    $default  reduce using rule 19 (stmt)
+
+
+State 49
+
+   21 stmt: assignment SEMI .
+
+    $default  reduce using rule 21 (stmt)
+
+
+State 50
+
+   31 expr: expr ADD . expr
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 63
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 51
+
+   32 expr: expr SUB . expr
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 64
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 52
+
+   33 expr: expr MULT . expr
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 65
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 53
+
+   34 expr: expr DIV . expr
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 66
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 54
+
+   20 stmt: expr SEMI .
+
+    $default  reduce using rule 20 (stmt)
+
+
+State 55
+
+   22 stmt: return_st SEMI .
+
+    $default  reduce using rule 22 (stmt)
+
+
+State 56
+
+   30 assignment: IDENTIFIER ASSIGN expr .
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+
+    $default  reduce using rule 30 (assignment)
+
+
+State 57
+
+   38 func_call: IDENTIFIER LPAREN call_seq . RPAREN
+   39 call_seq: call_seq . COMMA term
+
+    RPAREN  shift, and go to state 67
+    COMMA   shift, and go to state 68
+
+
+State 58
+
+   40 call_seq: term .
+
+    $default  reduce using rule 40 (call_seq)
+
+
+State 59
+
+   35 expr: LPAREN expr RPAREN .
+
+    $default  reduce using rule 35 (expr)
+
+
+State 60
+
+   27 decl_as: IDENTIFIER ASSIGN . expr
+
+    IDENTIFIER  shift, and go to state 40
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+    LPAREN      shift, and go to state 26
+
+    expr       go to state 69
+    func_call  go to state 33
+    term       go to state 35
+
+
+State 61
+
+   25 decl_chain: decl_chain COMMA . decl_as
+
+    IDENTIFIER  shift, and go to state 70
+
+    decl_as  go to state 71
+
+
+State 62
+
+   28 decl_seq: decl_seq COMMA . IDENTIFIER
+
+    IDENTIFIER  shift, and go to state 72
+
+
+State 63
+
+   31 expr: expr . ADD expr
+   31     | expr ADD expr .
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+
+    ADD       [reduce using rule 31 (expr)]
+    SUB       [reduce using rule 31 (expr)]
+    MULT      [reduce using rule 31 (expr)]
+    DIV       [reduce using rule 31 (expr)]
+    $default  reduce using rule 31 (expr)
+
+
+State 64
+
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   32     | expr SUB expr .
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+
+    ADD       [reduce using rule 32 (expr)]
+    SUB       [reduce using rule 32 (expr)]
+    MULT      [reduce using rule 32 (expr)]
+    DIV       [reduce using rule 32 (expr)]
+    $default  reduce using rule 32 (expr)
+
+
+State 65
+
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   33     | expr MULT expr .
+   34     | expr . DIV expr
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+
+    ADD       [reduce using rule 33 (expr)]
+    SUB       [reduce using rule 33 (expr)]
+    MULT      [reduce using rule 33 (expr)]
+    DIV       [reduce using rule 33 (expr)]
+    $default  reduce using rule 33 (expr)
+
+
+State 66
+
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+   34     | expr DIV expr .
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+
+    ADD       [reduce using rule 34 (expr)]
+    SUB       [reduce using rule 34 (expr)]
+    MULT      [reduce using rule 34 (expr)]
+    DIV       [reduce using rule 34 (expr)]
+    $default  reduce using rule 34 (expr)
+
+
+State 67
+
+   38 func_call: IDENTIFIER LPAREN call_seq RPAREN .
+
+    $default  reduce using rule 38 (func_call)
+
+
+State 68
+
+   39 call_seq: call_seq COMMA . term
+
+    IDENTIFIER  shift, and go to state 38
+    FLOAT       shift, and go to state 23
+    INT         shift, and go to state 24
+
+    term  go to state 73
+
+
+State 69
+
+   27 decl_as: IDENTIFIER ASSIGN expr .
+   31 expr: expr . ADD expr
+   32     | expr . SUB expr
+   33     | expr . MULT expr
+   34     | expr . DIV expr
+
+    ADD   shift, and go to state 50
+    SUB   shift, and go to state 51
+    MULT  shift, and go to state 52
+    DIV   shift, and go to state 53
+
+    $default  reduce using rule 27 (decl_as)
+
+
+State 70
+
+   27 decl_as: IDENTIFIER . ASSIGN expr
+
+    ASSIGN  shift, and go to state 60
+
+
+State 71
+
+   25 decl_chain: decl_chain COMMA decl_as .
+
+    $default  reduce using rule 25 (decl_chain)
+
+
+State 72
+
+   28 decl_seq: decl_seq COMMA IDENTIFIER .
+
+    $default  reduce using rule 28 (decl_seq)
+
+
+State 73
+
+   39 call_seq: call_seq COMMA term .
+
+    $default  reduce using rule 39 (call_seq)

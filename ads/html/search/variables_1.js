@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lchild',['lchild',['../structnode.html#a5e9a6db5c18bb131ca4b72a1ff575ad8',1,'node']]]
+  ['child',['child',['../structnode.html#a422bd5292acd3b746c3f3113f76de9a7',1,'node::child()'],['../structnodef.html#a03c0d01036bbca579381e8f93df0ad87',1,'nodef::child()']]]
 ];
